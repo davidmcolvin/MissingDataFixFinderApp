@@ -9,7 +9,6 @@ namespace MissingDataFixFinderFormsUI
 {
   public static class GlobalConfig
   {
-    public static readonly string PathToDataFixFolder = @"\AumentumTax\Modules\Alter\DB\DataFix";
     public static readonly List<string> FoldersToIgnore = new List<string>() { "Templates" };
 
     public static string CnnString(string name)
