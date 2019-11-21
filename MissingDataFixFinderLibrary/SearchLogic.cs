@@ -47,29 +47,6 @@ namespace MissingDataFixFinderFormsUI
       foreach (DataFixModel dm in foundInDataBaseDataFixModels)
       {
         DataFixModel res;
-        DataFixModel resTwo;
-
-        res = foundInFolderDataFixModels.Where(x => x.MajorVersion == dm.MajorVersion
-                                                      && x.MinorVersion == dm.MinorVersion
-                                                      && x.BuildVersion == dm.BuildVersion
-                                                      && x.RevnVersion == dm.RevnVersion).FirstOrDefault();
-        if (res != null)
-        {
-          resTwo = foundInFolderAndDatabaseDataFixModels.Where(x => x.MajorVersion == dm.MajorVersion
-                                                      && x.MinorVersion == dm.MinorVersion
-                                                      && x.BuildVersion == dm.BuildVersion
-                                                      && x.RevnVersion == dm.RevnVersion).FirstOrDefault();
-          if ( resTwo == null )
-          {
-            foundInFolderAndDatabaseDataFixModels.Add( dm );
-          }
-        }
-      }
-
-
-      foreach (DataFixModel dm in foundInDataBaseDataFixModels)
-      {
-        DataFixModel res;
         res = foundInFolderDataFixModels.Where(x => x.MajorVersion == dm.MajorVersion
                                                       && x.MinorVersion == dm.MinorVersion
                                                       && x.BuildVersion == dm.BuildVersion
