@@ -29,30 +29,32 @@
     private void InitializeComponent()
     {
       this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-      this.button1 = new System.Windows.Forms.Button();
+      this.selectFolderButton = new System.Windows.Forms.Button();
       this.foundInDatabaseButNotFolderlistBox = new System.Windows.Forms.ListBox();
-      this.resultsLabel = new System.Windows.Forms.Label();
+      this.FoundInDatabaseButNotFolderListBoxLabel = new System.Windows.Forms.Label();
       this.searchButton = new System.Windows.Forms.Button();
-      this.label1 = new System.Windows.Forms.Label();
-      this.label2 = new System.Windows.Forms.Label();
+      this.headerLabel = new System.Windows.Forms.Label();
+      this.FoundinFolderButNotDatabaseListBoxLabel = new System.Windows.Forms.Label();
       this.foundInFolderButNotDatabaselistBox = new System.Windows.Forms.ListBox();
-      this.label3 = new System.Windows.Forms.Label();
+      this.FoundInDatabaseAndFolderListBoxLabel = new System.Windows.Forms.Label();
       this.foundInFolderAndDatabaselistBox = new System.Windows.Forms.ListBox();
       this.databaseNoFolderLabel = new System.Windows.Forms.Label();
       this.folderNoDatabaseLabel = new System.Windows.Forms.Label();
       this.foundInBothLabel = new System.Windows.Forms.Label();
+      this.chosenFolderLabel = new System.Windows.Forms.Label();
+      this.inDatabaseLabel = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
-      // button1
+      // selectFolderButton
       // 
-      this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.button1.Location = new System.Drawing.Point(12, 55);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(121, 28);
-      this.button1.TabIndex = 0;
-      this.button1.Text = "Select Folder";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.button1_Click);
+      this.selectFolderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.selectFolderButton.Location = new System.Drawing.Point(12, 55);
+      this.selectFolderButton.Name = "selectFolderButton";
+      this.selectFolderButton.Size = new System.Drawing.Size(121, 28);
+      this.selectFolderButton.TabIndex = 0;
+      this.selectFolderButton.Text = "Select Folder";
+      this.selectFolderButton.UseVisualStyleBackColor = true;
+      this.selectFolderButton.Click += new System.EventHandler(this.selectFolderButton_Click);
       // 
       // foundInDatabaseButNotFolderlistBox
       // 
@@ -64,15 +66,15 @@
       this.foundInDatabaseButNotFolderlistBox.TabIndex = 1;
       this.foundInDatabaseButNotFolderlistBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.foundInDatabaseButNotFolderlistBox_KeyDown);
       // 
-      // resultsLabel
+      // FoundInDatabaseButNotFolderListBoxLabel
       // 
-      this.resultsLabel.AutoSize = true;
-      this.resultsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.resultsLabel.Location = new System.Drawing.Point(8, 131);
-      this.resultsLabel.Name = "resultsLabel";
-      this.resultsLabel.Size = new System.Drawing.Size(312, 20);
-      this.resultsLabel.TabIndex = 2;
-      this.resultsLabel.Text = "Found In Database But Not Folder Results";
+      this.FoundInDatabaseButNotFolderListBoxLabel.AutoSize = true;
+      this.FoundInDatabaseButNotFolderListBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FoundInDatabaseButNotFolderListBoxLabel.Location = new System.Drawing.Point(8, 131);
+      this.FoundInDatabaseButNotFolderListBoxLabel.Name = "FoundInDatabaseButNotFolderListBoxLabel";
+      this.FoundInDatabaseButNotFolderListBoxLabel.Size = new System.Drawing.Size(312, 20);
+      this.FoundInDatabaseButNotFolderListBoxLabel.TabIndex = 2;
+      this.FoundInDatabaseButNotFolderListBoxLabel.Text = "Found In Database But Not Folder Results";
       // 
       // searchButton
       // 
@@ -85,25 +87,25 @@
       this.searchButton.UseVisualStyleBackColor = true;
       this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
       // 
-      // label1
+      // headerLabel
       // 
-      this.label1.AutoSize = true;
-      this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label1.Location = new System.Drawing.Point(12, 13);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(250, 26);
-      this.label1.TabIndex = 4;
-      this.label1.Text = "Find Data Fixes Not Ran";
+      this.headerLabel.AutoSize = true;
+      this.headerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.headerLabel.Location = new System.Drawing.Point(12, 13);
+      this.headerLabel.Name = "headerLabel";
+      this.headerLabel.Size = new System.Drawing.Size(250, 26);
+      this.headerLabel.TabIndex = 4;
+      this.headerLabel.Text = "Find Data Fixes Not Ran";
       // 
-      // label2
+      // FoundinFolderButNotDatabaseListBoxLabel
       // 
-      this.label2.AutoSize = true;
-      this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label2.Location = new System.Drawing.Point(545, 131);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(312, 20);
-      this.label2.TabIndex = 6;
-      this.label2.Text = "Found In Folder But Not Database Results";
+      this.FoundinFolderButNotDatabaseListBoxLabel.AutoSize = true;
+      this.FoundinFolderButNotDatabaseListBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FoundinFolderButNotDatabaseListBoxLabel.Location = new System.Drawing.Point(545, 131);
+      this.FoundinFolderButNotDatabaseListBoxLabel.Name = "FoundinFolderButNotDatabaseListBoxLabel";
+      this.FoundinFolderButNotDatabaseListBoxLabel.Size = new System.Drawing.Size(312, 20);
+      this.FoundinFolderButNotDatabaseListBoxLabel.TabIndex = 6;
+      this.FoundinFolderButNotDatabaseListBoxLabel.Text = "Found In Folder But Not Database Results";
       // 
       // foundInFolderButNotDatabaselistBox
       // 
@@ -115,15 +117,15 @@
       this.foundInFolderButNotDatabaselistBox.TabIndex = 5;
       this.foundInFolderButNotDatabaselistBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.foundInFolderButNotDatabaselistBox_KeyDown);
       // 
-      // label3
+      // FoundInDatabaseAndFolderListBoxLabel
       // 
-      this.label3.AutoSize = true;
-      this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label3.Location = new System.Drawing.Point(282, 317);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(287, 20);
-      this.label3.TabIndex = 8;
-      this.label3.Text = "Found In Folder And Database Results";
+      this.FoundInDatabaseAndFolderListBoxLabel.AutoSize = true;
+      this.FoundInDatabaseAndFolderListBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FoundInDatabaseAndFolderListBoxLabel.Location = new System.Drawing.Point(282, 317);
+      this.FoundInDatabaseAndFolderListBoxLabel.Name = "FoundInDatabaseAndFolderListBoxLabel";
+      this.FoundInDatabaseAndFolderListBoxLabel.Size = new System.Drawing.Size(287, 20);
+      this.FoundInDatabaseAndFolderListBoxLabel.TabIndex = 8;
+      this.FoundInDatabaseAndFolderListBoxLabel.Text = "Found In Folder And Database Results";
       // 
       // foundInFolderAndDatabaselistBox
       // 
@@ -162,23 +164,43 @@
       this.foundInBothLabel.TabIndex = 11;
       this.foundInBothLabel.Text = "0";
       // 
+      // chosenFolderLabel
+      // 
+      this.chosenFolderLabel.AutoSize = true;
+      this.chosenFolderLabel.Location = new System.Drawing.Point(140, 69);
+      this.chosenFolderLabel.Name = "chosenFolderLabel";
+      this.chosenFolderLabel.Size = new System.Drawing.Size(155, 13);
+      this.chosenFolderLabel.TabIndex = 12;
+      this.chosenFolderLabel.Text = "Please select a folder to search";
+      // 
+      // inDatabaseLabel
+      // 
+      this.inDatabaseLabel.AutoSize = true;
+      this.inDatabaseLabel.Location = new System.Drawing.Point(269, 25);
+      this.inDatabaseLabel.Name = "inDatabaseLabel";
+      this.inDatabaseLabel.Size = new System.Drawing.Size(126, 13);
+      this.inDatabaseLabel.TabIndex = 13;
+      this.inDatabaseLabel.Text = "Please select a database";
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(947, 585);
+      this.Controls.Add(this.inDatabaseLabel);
+      this.Controls.Add(this.chosenFolderLabel);
       this.Controls.Add(this.foundInBothLabel);
       this.Controls.Add(this.folderNoDatabaseLabel);
       this.Controls.Add(this.databaseNoFolderLabel);
-      this.Controls.Add(this.label3);
+      this.Controls.Add(this.FoundInDatabaseAndFolderListBoxLabel);
       this.Controls.Add(this.foundInFolderAndDatabaselistBox);
-      this.Controls.Add(this.label2);
+      this.Controls.Add(this.FoundinFolderButNotDatabaseListBoxLabel);
       this.Controls.Add(this.foundInFolderButNotDatabaselistBox);
-      this.Controls.Add(this.label1);
+      this.Controls.Add(this.headerLabel);
       this.Controls.Add(this.searchButton);
-      this.Controls.Add(this.resultsLabel);
+      this.Controls.Add(this.FoundInDatabaseButNotFolderListBoxLabel);
       this.Controls.Add(this.foundInDatabaseButNotFolderlistBox);
-      this.Controls.Add(this.button1);
+      this.Controls.Add(this.selectFolderButton);
       this.Name = "Form1";
       this.Text = "Missing Data Fix Finder";
       this.ResumeLayout(false);
@@ -189,18 +211,20 @@
     #endregion
 
     private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button selectFolderButton;
     private System.Windows.Forms.ListBox foundInDatabaseButNotFolderlistBox;
-    private System.Windows.Forms.Label resultsLabel;
+    private System.Windows.Forms.Label FoundInDatabaseButNotFolderListBoxLabel;
     private System.Windows.Forms.Button searchButton;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label headerLabel;
+    private System.Windows.Forms.Label FoundinFolderButNotDatabaseListBoxLabel;
     private System.Windows.Forms.ListBox foundInFolderButNotDatabaselistBox;
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label FoundInDatabaseAndFolderListBoxLabel;
     private System.Windows.Forms.ListBox foundInFolderAndDatabaselistBox;
     private System.Windows.Forms.Label databaseNoFolderLabel;
     private System.Windows.Forms.Label folderNoDatabaseLabel;
     private System.Windows.Forms.Label foundInBothLabel;
+    private System.Windows.Forms.Label chosenFolderLabel;
+    private System.Windows.Forms.Label inDatabaseLabel;
   }
 }
 

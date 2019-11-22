@@ -15,14 +15,36 @@ namespace MissingDataFixFinderFormsUI
     List<DataFixModel> foundInFolderAndDatabaseDataFixModels = new List<DataFixModel>();
 
     private string selectedFolder = @"C:\dev\AumentumTax\Modules\Alter\DB\DataFix";
+
     public Form1()
     {
       InitializeComponent();
-      WireUpLists();
+      WireUpForm();
     }
 
-    private void WireUpLists()
+    private void WireUpForm()
     {
+      if ( selectedFolder != null && selectedFolder.Length > 0 )
+      {
+        chosenFolderLabel.Text = selectedFolder;
+      }
+      else
+      {
+        chosenFolderLabel.Text = "Please choose a folder to search";
+      }
+
+
+      if ( GlobalConfig.AppKeyLookup( "ConnectionStringName" ) != null && GlobalConfig.AppKeyLookup( "ConnectionStringName" ).Length > 0 )
+      {
+        inDatabaseLabel.Text = $"In database {GlobalConfig.AppKeyLookup( "ConnectionStringName" )}";
+      }
+      else
+      {
+        inDatabaseLabel.Text = "Please configure a database to search";
+      }
+
+
+
       foundInDatabaseButNotFolderlistBox.DataSource = null;
 
       if ( foundInDatabaseButNotFolderDataFixModels.Count > 0 )
@@ -68,13 +90,14 @@ namespace MissingDataFixFinderFormsUI
 
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void selectFolderButton_Click(object sender, EventArgs e)
     {
       FolderBrowserDialog folderBrowserDialog = folderBrowserDialog1;
       if ( folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK )
       {
         selectedFolder = folderBrowserDialog.SelectedPath;
       }
+      WireUpForm();
 
     }
 
@@ -83,7 +106,7 @@ namespace MissingDataFixFinderFormsUI
       try
       {
        foundInFolderAndDatabaseDataFixModels  = SearchLogic.FindMismatches( selectedFolder, foundInDatabaseButNotFolderDataFixModels, foundInFolderButNotDatabaseDataFixModels);
-        WireUpLists();
+        WireUpForm();
       }
       catch ( DirectoryNotFoundException ex )
       {
